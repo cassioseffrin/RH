@@ -11,8 +11,8 @@ public class EmpregadoComissionado extends Empregado {
     private double porcentagemComissao;
     
   
-	public EmpregadoComissionado(String nome, String sobreNome, String cpf, String sexo, double vendasBrutas, double porcentagemComissao) {
-		super( nome, sobreNome, cpf, sexo);
+	public EmpregadoComissionado(Integer codigo, String nome, String sobreNome, String cpf, String sexo, double vendasBrutas, double porcentagemComissao) {
+		super( codigo, nome, sobreNome, cpf, sexo);
 		this.vendasBrutas = vendasBrutas;
 		this.porcentagemComissao = porcentagemComissao;
 	}

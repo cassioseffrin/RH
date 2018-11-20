@@ -47,8 +47,10 @@ public class Uteis {
 		while (scan.hasNext()) {
 			linha = scan.nextLine();
 			String arr[] = linha.split(";");
-			EmpregadoAssalariado e = new EmpregadoAssalariado(arr[0], arr[1], arr[2], arr[3],
-					Double.parseDouble(arr[4]));
+                        
+			EmpregadoAssalariado e = new EmpregadoAssalariado(Integer.parseInt(arr[0]), arr[1], arr[2], arr[3], arr[4],
+					Double.parseDouble(arr[5]));
+                        
 			lstEmp.add(e);
 		}
 		return lstEmp;
@@ -64,44 +66,13 @@ public class Uteis {
 		while (scan.hasNext()) {
 			linha = scan.nextLine();
 			String arr[] = linha.split(";");
-			EmpregadoComissionado e = new EmpregadoComissionado(arr[0], arr[1], arr[2], arr[3],
-					Double.parseDouble(arr[4]), Double.parseDouble(arr[5]));
+			EmpregadoComissionado e = new EmpregadoComissionado(Integer.parseInt(arr[0]), arr[1], arr[2], arr[3], arr[4],
+					Double.parseDouble(arr[5]), Double.parseDouble(arr[6]));
 			lstEmp.add(e);
 		}
 		return lstEmp;
 	}
 
-	// public static <T, E> void gravar (T empregado, List<E> listagem, String
-	// nomeArquivo) throws IOException{
-	// try {
-	//
-	// for (E e : listagem) {
-	// if (e.equals(empregado)) {
-	// System.out.println("Opa, o CPF do empregado jah existe!");
-	// return;
-	// }
-	// }
-	// } catch (Exception ex) {
-	// System.out.printf("\nOpa, O arquivo %s nao existe!", nomeArquivo);
-	// }
-	//
-	// File arquivo = new File(nomeArquivo);
-	// FileOutputStream fos = new FileOutputStream(arquivo, true);
-	// fos.write( empregado.toString().getBytes());
-	// fos.close();
-	// System.out.println("Funcionario salvo!!!");
-	//
-	// }
-	//
-	//
-	// public static <T> void gravar (T empregado, String nomeArquivo) throws
-	// IOException{
-	// File arquivo = new File(nomeArquivo);
-	// FileOutputStream fos = new FileOutputStream(arquivo, true);
-	// fos.write( empregado.toString().getBytes());
-	// fos.close();
-	// System.out.println("Funcionario salvo!!!");
-	//
-	// }
+	 
 
 }

@@ -75,7 +75,8 @@ public class SistemaRH extends JFrame implements ActionListener{
 			painelCentro.add(painelCliente, BorderLayout.CENTER);
 			revalidate();
 			
-		}	
+		}
+        
 		
 	}
 }

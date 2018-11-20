@@ -116,7 +116,7 @@ public class Principal {
 		System.out.println("Digite o nome:");
 		Scanner scan = new Scanner(System.in);
 		String nome = scan.nextLine();
-		EmpregadoAssalariado empAssalariado = new EmpregadoAssalariado(nome, "Matei", "24985729", "Masculino",
+		EmpregadoAssalariado empAssalariado = new EmpregadoAssalariado(1, nome, "Matei", "24985729", "Masculino",
 				2400.00);
 
 		try {

@@ -17,10 +17,14 @@ public class EmpregadoAssalariado extends Empregado implements Comparable<Empreg
 
 	private double salarioMensal;
 
-	public EmpregadoAssalariado(String nome, String sobreNome, String cpf, String sexo, double salarioMensal) {
-		super(nome, sobreNome, cpf, sexo);
+	public EmpregadoAssalariado(Integer codigo, String nome, String sobreNome, String cpf, String sexo, double salarioMensal) {
+		super(codigo, nome, sobreNome, cpf, sexo);
 		this.salarioMensal = salarioMensal;
 	}
+
+    public EmpregadoAssalariado() {
+
+    }
 
 
 

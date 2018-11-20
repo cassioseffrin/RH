@@ -6,6 +6,7 @@ import java.io.IOException;
 public abstract class Empregado {
 	
 	
+	private Integer codigo;
 	private String nome;
 	private String sobreNome;
 	private String cpf;
@@ -13,18 +14,11 @@ public abstract class Empregado {
 
 	public Empregado() {
 	}
-//	@Override
-//	public boolean equals(Object obj) {
-//		if (  this.getCpf().equals(((Empregado) obj).getCpf())) {
-//			return true;
-//		} else {
-//			return false;
-//		}
-//	}
-	
+ 
 	
 
-	public Empregado(String nome, String sobreNome, String cpf, String sexo) {
+	public Empregado(Integer codigo, String nome, String sobreNome, String cpf, String sexo) {
+		this.codigo = codigo;
 		this.nome = nome;
 		this.sobreNome = sobreNome;
 		this.cpf = cpf;
@@ -73,6 +67,16 @@ public abstract class Empregado {
 	public void setSexo(String sexo) {
 		this.sexo = sexo;
 	}
+
+    public Integer getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(Integer codigo) {
+        this.codigo = codigo;
+    }
+        
+        
 
 	@Override
 	public String toString() {

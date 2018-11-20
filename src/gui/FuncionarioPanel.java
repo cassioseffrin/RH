@@ -1,5 +1,6 @@
 package gui;
 
+import java.awt.BorderLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -7,9 +8,12 @@ import java.awt.event.ActionListener;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.TitledBorder;
+import model.EmpregadoAssalariado;
+import model.dao.EmpregadoAssalariadoDAO;
 
 public class FuncionarioPanel extends JPanel implements ActionListener{
 	
@@ -41,7 +45,23 @@ public class FuncionarioPanel extends JPanel implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 		if (e.getActionCommand().equals("Salvar")){
 			System.out.println("Nome: "+nomeTextField.getText());
+                        
+                        EmpregadoAssalariado ea = new EmpregadoAssalariado();
+                        ea.setNome(nomeTextField.getText());
+                        ea.setCpf(cpfTextField.getText());
+                        
+                        EmpregadoAssalariadoDAO dao = new EmpregadoAssalariadoDAO();
+                        if (dao.inserir(ea)==true){
+                            JOptionPane.showMessageDialog(null,  "ok, o funcionario foi salvo");
+                            
+                        }else {
+                            
+                             JOptionPane.showMessageDialog(null,  "problema ao salvar!");
+                        }
+                        
 		}	
+                
+  
 	}    
 
 
