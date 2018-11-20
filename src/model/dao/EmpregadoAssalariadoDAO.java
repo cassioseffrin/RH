@@ -29,11 +29,16 @@ public final class EmpregadoAssalariadoDAO {
         setConnection((com.mysql.jdbc.Connection) con);
     }
 
-    public boolean inserir(EmpregadoAssalariado empregadoAssalariado) {
-        String sql = "INSERT INTO empregadoAssalariado( codigo,  nome,  sobreNome,  cpf,  sexo,  salarioMensal) VALUES(?,?,?,?,?,?)";
+    public boolean inserir(EmpregadoAssalariado ea) {
+        String sql = "INSERT INTO empregadoAssalariado( nome,  cpf ) VALUES(?,?)";
+//        String sql = "INSERT INTO empregadoAssalariado(   nome,  sobreNome,  cpf,  sexo,  salarioMensal) VALUES(?,?,?,?,?)";
         try {
             PreparedStatement stmt = connection.prepareStatement(sql);
-            stmt.setString(1, empregadoAssalariado.getNome());
+            stmt.setString(1, ea.getNome());
+//            stmt.setString(2, ea.getSobreNome());
+            stmt.setString(2, ea.getCpf());
+//            stmt.setString(4, empregadoAssalariado.getSexo());
+//            stmt.setDouble(5, empregadoAssalariado.getSalarioMensal());
             stmt.execute();
             return true;
         } catch (SQLException ex) {

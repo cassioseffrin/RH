@@ -55,7 +55,6 @@ public class FuncionarioPanel extends JPanel implements ActionListener{
                             JOptionPane.showMessageDialog(null,  "ok, o funcionario foi salvo");
                             
                         }else {
-                            
                              JOptionPane.showMessageDialog(null,  "problema ao salvar!");
                         }
                         
