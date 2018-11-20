@@ -53,7 +53,8 @@ public class FuncionarioPanel extends JPanel implements ActionListener{
                         EmpregadoAssalariadoDAO dao = new EmpregadoAssalariadoDAO();
                         if (dao.inserir(ea)==true){
                             JOptionPane.showMessageDialog(null,  "ok, o funcionario foi salvo");
-                            
+                            nomeTextField.setText("");
+                            cpfTextField.setText("");
                         }else {
                              JOptionPane.showMessageDialog(null,  "problema ao salvar!");
                         }
